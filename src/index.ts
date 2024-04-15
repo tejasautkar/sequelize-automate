@@ -16,7 +16,7 @@ async function main() {
             type: 'input',
             name: 'port',
             message: 'Enter database port:',
-            default: '3306', // Adjust the default port as needed
+            default: '5432', // Adjust the default port as needed
             validate: (value: string) => !!value.trim() || 'Port is required',
         },
         {
@@ -36,6 +36,12 @@ async function main() {
             name: 'database',
             message: 'Enter database name:',
             validate: (value: string) => !!value.trim() || 'Database name is required',
+        },
+        {
+            type: 'input',
+            name: 'schema',
+            message: 'Enter schema name:',
+            validate: (value: string) => !!value.trim() || 'Schema name is required',
         },
         {
             type: 'confirm',

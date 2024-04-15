@@ -13,6 +13,7 @@ export function createSequelizeInstance(userInput: SequelizeInstance): Sequelize
         username: userInput.username,
         password: userInput.password,
         database: userInput.database,
+        schema: userInput.schema,
         dialectOptions: {
             
             ssl: userInput.certificatesRequired ? { ca: fs.readFileSync(userInput.certificateLocation) } : false,

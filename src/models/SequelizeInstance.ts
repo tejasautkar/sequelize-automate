@@ -4,6 +4,7 @@ export interface SequelizeInstance {
     username: string;
     password: string; 
     database: string;
+    schema: string;
     certificatesRequired?: boolean;
     certificateLocation?: string;
 }
